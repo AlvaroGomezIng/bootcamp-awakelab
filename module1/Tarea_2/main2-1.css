@@ -1,0 +1,131 @@
+body {
+    font-family: "Comic sans MS";
+    background-color: rgb(235, 250, 245)
+}
+
+/*header {
+    margin-top: 50px;
+}*/
+
+.general-header {
+    border: 2px solid rgb(219, 207, 207);
+    background-image: url("/M1T2-Correo_y_archivos/design1_image1.jpg");
+    height: 280px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 4.8em;
+    color: rgb(15, 209, 90);
+    margin-top: 10px;
+    padding-left: 15px;
+    text-shadow:  1px 1px 2px rgb(255, 255, 255);
+}
+
+#overlay {
+    position: relative;
+}
+
+.sub-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    color: white;
+    border: 1.5px solid rgb(15, 15, 15);
+    background-color: black;
+/*     background-image: url("M1T2-Correo_y_archivos/nysl_logo.png");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 80%; */
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 42.5%;
+    left: 950px;
+/*     position: relative; */
+}
+
+.body-home {
+/*     border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-top: 80px;
+    margin-bottom: 50px;
+    grid-gap: 30px;
+
+}
+
+.body-home div{
+/*     background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black; */
+    text-align: left;
+}
+
+.nav-links {
+/*     border: 1px solid green; */
+    width: 60%;
+    padding-left: 40px;
+    display: grid;
+    grid-template-rows: 80px 80px 80px;
+  /*   grid-template-rows: */
+}
+
+.home-content {
+    padding-left: 40px;
+/*     border: 1px solid red; */
+    width: 75%;
+}
+
+.titulo1 {
+    margin-bottom: 35px;
+/*     border: 1px solid purple; */
+    padding-top: 0px;
+}
+
+.titulo2 {
+    font-style: italic;
+/*     border: 1px solid blue; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.titulo3 {
+    font-weight: bold;
+    font-size: 1.1em;
+/*     border: 1px solid blue; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.description {
+    margin-left: 30px;
+    margin-top: 0px;
+    text-align: justify;
+}
+
+.description2 {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.2em;
+}
+
+.main-link {
+    text-decoration: underline;
+    font-size: 1.3em;
+    color: blue;
+}
+
+.contact-email {
+    color: blue;
+    text-decoration: underline;
+}

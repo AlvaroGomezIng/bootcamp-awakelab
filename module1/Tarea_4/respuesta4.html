@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Respuesta</title>
+</head>
+<body>
+<h1>La información que enviaste desde tu formulario es la siguiente:</h1>
+
+<table border="1" align=center width="226">
+  <tr>
+    <th align="center">Nombre campo</th>
+    <th align="center">Valor campo</th>
+  </tr>
+
+<!-- estamos construyendo un script -->
+<script language="javascript">
+/*
+Esto es lenguaje javascript
+Acá mediante location.search devuelve la parte de consulta de una url, si la url
+es respuesta.thml?email=vcoronado@alarcon.com devolverá ?email=vcoronado@alarcon.com
+ver la siguiente url https://www.w3schools.com/jsref/prop_loc_search.asp  
+*/
+document.writeln('<tr>' + location.search + '</tr>');
+
+var args = location.search.substr(1).split('&');
+for (var i = 0; i < args.length; ++i) {
+  var parts = args[i].split('=');
+  if (parts != null) {
+    var field = parts[0];
+    var value = parts[1];
+    if (value == null) {
+      value = "null"
+    }
+    else {
+        //decodeUri() le quita los caracteres especiales que tiene una url por ejemplo %
+        //link https://www.w3schools.com/jsref/jsref_decodeuri.asp
+        //replace reemplaza en este caso el + por un espacio
+      value = '"' + decodeURI(value.replace(/\+/g, ' ')) + '"';
+      //value = '"' + decodeURI(value) + '"';
+    }
+
+    document.writeln('<tr><td align="center">' + field + '</td>');
+    document.writeln('<td align="center">' + value + '</td></tr>');
+  }
+}
+</script>
+</table>
+</body>
+</html>
