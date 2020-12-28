@@ -81,7 +81,6 @@ else {
 
 /* ACTIVIDAD 3: JavaScript - Funciones de Arrays */
 
-console.log("Here we are working with Arrays functions");
 
 /*     EXERCISE 1     */
 
@@ -213,104 +212,4 @@ function stringList(array) {
         }
     }
     return a
-}
-
-
-
-/* ------------------------------------------------------------------------------------------ */
-
-
-
-/* ACTIVIDAD 4: JavaScript - Funciones de Strings */
-
-console.log("Here we are working with Strings functions");
-
-/*     EXERCISE 1     */
-
-console.log("EXERCISE 1");
-
-function invStr(str) {
-    b = "";
-    for (let i = 0; i < str.length; i++) {
-        b = b + str[str.length-1 - i];
-    }
-    return b
-}
-
-
-/*     EXERCISE 2     */
-
-console.log("EXERCISE 2");
-
-function alfStr(str) { /* QUEDA PENDIENTE REVISAR QUE NUMEROS Y PUNTUACION NO PASEN */
-    let a = [];
-    for (let i = 0; i < str.length; i++) {
-        a.push(str[i]);
-    }
-
-    b = a.sort();
-    let c = "";
-    for (let j = 0; j < b.length; j++) {
-        c += b[j];
-    }
-    return c
-}
-
-
-/*     EJERCICIO 3     */
-
-console.log("EXERCISE 3");
-
-function capFromStr(str) {
-/* Transformar string separado por espacios en arreglo */
-    let a = "";
-    let b = [];
-    for (i = 0; i < str.length; i++) {
-        if (str[i] != " ") {
-            a += str[i];
-        }
-        else {
-            b.push(a)
-            a = ""
-        }
-    }
-    b.push(a)
-
-/* Transformar arreglo en string con mayúsculas incluidas */
-    let c = "";
-    /* recorrido por cada elemento string del arreglo */
-    for (k = 0; k < b.length; k++) {
-        /* recorrido por cada string del elemento string */
-        for (h = 0; h < b[k].length; h++) {
-            if (h == 0){
-                c += b[k][h].toUpperCase()
-            } else {c += b[k][h]}
-        }
-        /* agregar espacio al final de cada palabra excepto la última */
-        if (k != b.length-1) {
-            c += " "
-        }
-    }
-    return c
-}
-
-
-
-/*     EXERCISE 4     */
-
-console.log("EXERCISE 4");
-
-/* funciona cuando la palabra más larga es única, arreglar para caso en que hay más de una */
-function longStr(str) {
-    /* crear arreglo de strings a partir de string */
-    a = str.split(" ");
-    let b = []
-    /* obtener largo de string en cada elemento de arreglo */
-    for (i = 0; i < a.length; i++) {
-        b.push(a[i].length)
-    }
-    /* obtener el largo de palabra mayor */
-    c = Math.max.apply(null, b)
-    /* devolver la palabra en el índice del largo mayor */
-    return a[b.indexOf(c)]
 }
