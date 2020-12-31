@@ -1,6 +1,6 @@
 /*        NOTE: You can comment and uncomment the activities in order to visualize them individually as you prefer        */
 
-
+/* ------------------------------------------------------------------------------------------ */
 
 /*     ACTIVITY 1: JavaScript Básico     */
 
@@ -16,7 +16,7 @@ admin = nombre;
 document.writeln(admin + "<br><br>");
 
 
-
+/* ------------------------------------------------------------------------------------------ */
 
 
 /*     ACTIVITY 2: JavaScript Básico     */
