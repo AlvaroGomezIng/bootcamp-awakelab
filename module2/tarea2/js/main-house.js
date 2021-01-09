@@ -68,7 +68,15 @@ if (dataHouse.status == "OK") {
                 var votesPct = dataHouse.results[0].members[i].votes_with_party_pct + "%";
 
                 // editar texto de la celda para que muestre el contenido del dato
-                tdName.text(fullName);
+               /*  tdName.text(fullName); */
+                var anchor = $("<a>");
+                url = dataHouse.results[0].members[i].url;
+                if (url) {anchor.attr("href", url)} else {anchor.attr("href", "#")};
+                
+                anchor.attr("target", "_blank");
+                anchor.text(fullName);
+                tdName.append(anchor);
+
                 tdParty.text(party);
                 tdState.text(state);
                 tdSeniority.text(seniority);

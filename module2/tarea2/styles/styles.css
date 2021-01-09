@@ -23,5 +23,13 @@ body {
 }
 
 .tableData {
-    margin: 0 10%;
+    margin: 0 10%; 
+}
+
+a {
+    color:rgb(14, 10, 238);
+}
+
+.navbar a:hover {
+    background-color: rgb(118, 134, 143);
 }
